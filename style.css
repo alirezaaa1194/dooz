@@ -1,0 +1,114 @@
+@font-face {
+  font-family: IranSans;
+  src: url(./fonts/IRANSansWeb\(FaNum\)_Light.ttf);
+}
+* {
+  color-scheme: dark;
+  transition: 0.5s;
+  font-family: IranSans;
+  user-select: none;
+}
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: transparent !important;
+}
+body {
+  overflow-y: hidden;
+}
+.gameContainer {
+  width: 100%;
+  height: 100vh;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+}
+.item-container {
+  width: 360px;
+  height: 360px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+  background-image: url("https://www.ariabrick.com/wp-content/uploads/2022/11/01.jpg");
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0px 20px rgb(255, 174, 0);
+  border: 1px solid rgb(255, 174, 0);
+}
+.item {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(7.6px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: rgb(245, 142, 142);
+  text-shadow: 0 0 20px red;
+  cursor: pointer;
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+.item:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.gameIntro,
+.gameOutro {
+  background-color: rgba(255, 255, 255, 0.3);
+  width: fit-content;
+  padding: 15px;
+  margin: 100px auto;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 360px;
+}
+.gameIntro input {
+  width: 90%;
+  margin: 7px 0;
+  padding: 7px;
+  border-radius: 6px;
+  box-shadow: 0 0px 20px rgb(255, 174, 0);
+  border: 1px solid rgb(255, 174, 0);
+  outline: none;
+  font-size: 16px;
+}
+.gameIntro input::placeholder {
+  color: rgba(255, 255, 255, 0.685);
+}
+.gameIntro button,
+.gameOutro button {
+  box-shadow: 0 0px 20px rgb(255, 174, 0);
+  border: 1px solid rgb(255, 174, 0);
+  background-color: rgb(255, 174, 0);
+  padding: 5px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 8px 0;
+  color: blue;
+  font-size: 15px;
+  font-weight: bold;
+  outline: none;
+}
+.gameOutro {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: black;
+  visibility: hidden;
+  /* display: none; */
+  opacity: 0;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* margin: 0 auto; */
+}
